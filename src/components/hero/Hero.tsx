@@ -50,7 +50,7 @@ export function Hero() {
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-base-border bg-base-900/60 px-4 py-1.5 text-xs font-medium tracking-wide text-accent-blue2"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-accent-blue2" />
-            AI ENGINEER &amp; FULL STACK DEVELOPER
+            SOFTWARE DEVELOPER · AI/ML ENTHUSIAST
           </motion.div>
 
           <motion.div variants={item} className="mb-8">

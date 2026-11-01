@@ -21,7 +21,7 @@ export const projects: Project[] = [
     title: 'SmartAgro AI',
     description:
       'Deep learning-based plant disease detection and advisory system using a custom CNN trained on plant leaf images.',
-    image: '/projects/smartagro.jpg',
+    image: '/projects/smartagro.png',
     tech: ['TensorFlow', 'CNN', 'Flask', 'Tailwind'],
     githubUrl: 'https://github.com/nirjal0007/smartagro-ai',
     demoUrl: '#',
@@ -30,22 +30,22 @@ export const projects: Project[] = [
   {
     id: 'ai-civic-inspector',
     number: '02',
-    title: 'AI Civic Inspector',
+    title: 'AI CivicEye',
     description:
       'AI powered civic issue reporting platform for Nepal infrastructure — citizens report issues with photos, auto-classified and mapped.',
-    image: '/projects/civic-inspector.jpg',
+    image: '/projects/civiceye.jpg',
     tech: ['React', 'Flask', 'Leaflet', 'Gemini API'],
     githubUrl: 'https://github.com/nirjal0007/ai-civic-inspector',
     demoUrl: '#',
     featured: true,
   },
   {
-    id: 'constructify',
+    id: 'BuildFlow',
     number: '03',
-    title: 'Constructify',
+    title: 'BuildFlow',
     description:
       'Construction management system with quote requests, project tracking and an admin panel for contractors.',
-    image: '/projects/constructify.jpg',
+    image: '/projects/buildflow.png',
     tech: ['Laravel', 'MySQL', 'Tailwind'],
     githubUrl: 'https://github.com/nirjal0007/constructify',
     demoUrl: '#',
@@ -54,10 +54,10 @@ export const projects: Project[] = [
   {
     id: 'womencare-system',
     number: '04',
-    title: 'WomenCare System',
+    title: 'WomenCare Application',
     description:
       'Menstrual cycle tracker, mood journal and community platform designed with a privacy-first approach.',
-    image: '/projects/womencare.jpg',
+    image: '/projects/womencare.png',
     tech: ['React', 'Spring Boot', 'MySQL'],
     githubUrl: 'https://github.com/nirjal0007/womencare-system',
     demoUrl: '#',

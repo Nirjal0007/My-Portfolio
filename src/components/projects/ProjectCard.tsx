@@ -1,3 +1,4 @@
+
 import { useRef, useState, type MouseEvent } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Github, ArrowUpRight } from 'lucide-react'
@@ -14,20 +15,25 @@ export function ProjectCard({ project, size = 'default' }: ProjectCardProps) {
   const ref = useRef<HTMLDivElement>(null)
   const imageWrapRef = useRef<HTMLDivElement>(null)
   const [tilt, setTilt] = useState({ rx: 0, ry: 0 })
+
   const isLarge = size === 'large'
+  const isWomenCare = project.id === 'womencare-system'
 
   const { scrollYProgress } = useScroll({
     target: imageWrapRef,
     offset: ['start end', 'end start'],
   })
+
   const imageY = useTransform(scrollYProgress, [0, 1], ['-8%', '8%'])
 
-  function handleMouseMove(e: MouseEvent) {
+  function handleMouseMove(e: MouseEvent<HTMLDivElement>) {
     const el = ref.current
     if (!el) return
+
     const rect = el.getBoundingClientRect()
     const px = (e.clientX - rect.left) / rect.width - 0.5
     const py = (e.clientY - rect.top) / rect.height - 0.5
+
     setTilt({ rx: py * -4, ry: px * 4 })
   }
 
@@ -50,31 +56,47 @@ export function ProjectCard({ project, size = 'default' }: ProjectCardProps) {
         isLarge && 'lg:grid lg:grid-cols-2'
       )}
     >
-      <div
-        ref={imageWrapRef}
-        className={cn(
-          'relative overflow-hidden',
-          isLarge ? 'aspect-[16/10] lg:aspect-auto' : 'aspect-[16/10]'
-        )}
-      >
-        <motion.img
-          src={project.image}
-          alt={project.title}
-          loading="lazy"
-          style={{ y: imageY, scale: 1.15 }}
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-base-950/80 via-base-950/5 to-transparent lg:bg-gradient-to-r" />
-        <span className="absolute left-4 top-4 rounded-md border border-white/10 bg-base-950/70 px-2.5 py-1 font-mono text-xs text-accent-blue2 backdrop-blur-sm">
-          {project.number}
-        </span>
-      </div>
+      {/* Project image */}
 
+{/* Project image */}
+<div
+  ref={imageWrapRef}
+  className="relative overflow-hidden bg-base-950"
+>
+  <motion.img
+    src={project.image}
+    alt={`${project.title} screenshot`}
+    loading="lazy"
+    style={{
+      y: 0,
+      scale: 1,
+    }}
+    className="block h-auto w-full object-contain"
+  />
+
+  <span className="absolute left-4 top-4 rounded-md border border-white/10 bg-base-950/70 px-2.5 py-1 font-mono text-xs text-accent-blue2 backdrop-blur-sm">
+    {project.number}
+  </span>
+</div>
+
+
+      {/* Project details */}
       <div className={cn('flex flex-col justify-center p-6', isLarge && 'lg:p-10')}>
-        <h3 className={cn('mb-3 font-semibold text-paper', isLarge ? 'text-2xl lg:text-3xl' : 'text-lg')}>
+        <h3
+          className={cn(
+            'mb-3 font-semibold text-paper',
+            isLarge ? 'text-2xl lg:text-3xl' : 'text-lg'
+          )}
+        >
           {project.title}
         </h3>
-        <p className={cn('mb-5 leading-relaxed text-muted', isLarge ? 'text-base' : 'text-sm')}>
+
+        <p
+          className={cn(
+            'mb-5 leading-relaxed text-muted',
+            isLarge ? 'text-base' : 'text-sm'
+          )}
+        >
           {project.description}
         </p>
 
@@ -90,7 +112,7 @@ export function ProjectCard({ project, size = 'default' }: ProjectCardProps) {
         </div>
 
         <div className="flex items-center gap-5">
-          {project.demoUrl && (
+          {project.demoUrl && project.demoUrl !== '#' && (
             <a
               href={project.demoUrl}
               target="_blank"
@@ -100,6 +122,7 @@ export function ProjectCard({ project, size = 'default' }: ProjectCardProps) {
               View Project <ArrowUpRight size={15} />
             </a>
           )}
+
           {project.githubUrl && (
             <a
               href={project.githubUrl}
