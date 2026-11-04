@@ -14,13 +14,13 @@ export const skillCategories: SkillCategory[] = [
     id: 'ai',
     title: 'AI & Machine Learning',
     icon: 'ai',
-    skills: ['TensorFlow', 'PyTorch', 'Computer Vision', 'CNN', 'NumPy', 'Pandas', 'Scikit-learn'],
+    skills: ['TensorFlow', 'PyTorch', 'Computer Vision', 'CNN', 'NumPy', 'Pandas'],
   },
   {
     id: 'frontend',
     title: 'Frontend',
     icon: 'frontend',
-    skills: ['React', 'Tailwind CSS', 'JavaScript (ES6+)', 'TypeScript', 'Framer Motion', 'Vite'],
+    skills: ['React', 'Tailwind CSS', 'JavaScript', 'TypeScript', 'Framer Motion', 'Vite'],
   },
   {
     id: 'backend',
@@ -32,7 +32,7 @@ export const skillCategories: SkillCategory[] = [
     id: 'database',
     title: 'Database',
     icon: 'database',
-    skills: ['MySQL', 'SQLite', 'MongoDB (Basics)', 'Firebase'],
+    skills: ['MySQL'],
   },
   {
     id: 'tools',
@@ -52,7 +52,6 @@ export const marqueeTech: string[] = [
   'Git',
   'Docker',
   'Linux',
-  'OpenCV',
   'Pandas',
   'NumPy',
 ]
