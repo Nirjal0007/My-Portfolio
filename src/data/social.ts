@@ -33,7 +33,7 @@ export const socialLinks: SocialLink[] = [
     id: 'resume',
     label: 'Resume',
     value: 'Download PDF',
-    href: '/resume.pdf',
+    href: '/Nirjal_Acharya.pdf',
     icon: 'file',
     accent: true,
   },

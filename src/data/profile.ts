@@ -32,7 +32,7 @@ export const profile: Profile = {
   bio: "I'm a BIT student from Kathmandu, Nepal passionate about Artificial Intelligence, Deep Learning, and building impactful full stack applications. I love turning ideas into products that make a real difference.",
   location: 'Kathmandu, Nepal',
   photo: '/profile1.png',
-  resumeUrl: '/resume.pdf',
+  resumeUrl: '/Nirjal_Acharya.pdf',
   aboutTitle:"I enjoy building AI-powered software that transforms research into practical applications.",
 
 aboutDescription:

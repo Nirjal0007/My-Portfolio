@@ -128,7 +128,7 @@ export function Navbar() {
               download
               className="mt-1 flex items-center justify-center gap-2 rounded-lg bg-accent-blue px-4 py-3 text-sm font-medium text-white"
             >
-              Resume.pdf <Download size={14} />
+              Nirjal_Acharya.pdf <Download size={14} />
             </a>
           </motion.div>
         )}
